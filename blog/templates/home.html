@@ -7,21 +7,24 @@
     <title>In-Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
 </head>
-<body>
-
-{% block content %}
-  <h2>Homepage</h2>
-  <p>Hello {{ user.username }}!</p>
-{% endblock %}
-
-<form method="GET" action="" >
-<input id= "searchbar" type="text" name="q" placeholder="Search product"/>
-<input type="submit" value="Search"/>
-</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<body>
+    <p>
+    {% block content %}
+     <h2>Homepage</h2>
+    <p>Hello {{ user.username }}!</p>
+    {% endblock %}
+    </p>
+    <div>
+    <form method="GET" action="search_result" >
+        <input id= "searchbar" type="text" name="q" placeholder="Search product"/>
+        <input type="submit" value="Search"/>
+    </form>
+    </div>
 
 </body>
 </html>
