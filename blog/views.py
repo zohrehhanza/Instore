@@ -65,5 +65,3 @@ def search_result(request):
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
    # return render(request, 'main/hashdet.html', {'hash': hash})
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
