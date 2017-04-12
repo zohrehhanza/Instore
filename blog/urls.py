@@ -1,7 +1,6 @@
 from django.conf.urls import url
 from . import views
 from django.contrib.auth import views as auth_views
-#from  instore.blog import views as blog_views
 
 urlpatterns = [
      url(r'^$', auth_views.login, name='home'),
