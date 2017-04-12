@@ -23,9 +23,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
-    url(r'^login/$', auth_views.login, name='home'),
+    #url(r'^login/$', auth_views.login, name='home'),
     #url(r'^logout/$', auth_views.logout, name='logout'),
     #url(r'^$', blog_views.home, name='home'),
-    url(r'^$', auth_views.login, name='home'),
+   # url(r'^$', auth_views.login, name='home'),
 
 ]
