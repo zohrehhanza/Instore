@@ -57,7 +57,7 @@ def search_result(request):
     products = db['products']
     b = []
 
-    b = products.find({'$text': {'$search': 'q'}})
+    b = products.find({'$text': {'$search': query}})
     #print(b)
     for doc in b:
         context = {doc['store'] , doc['price'], doc['description']}
