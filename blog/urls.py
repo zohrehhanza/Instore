@@ -11,6 +11,6 @@ urlpatterns = [
     #url(r'^accounts/', include('allauth.urls'), name='facebook'),
     url(r'^login/$', auth_views.login, name='home'),
     url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'^$', views.home, name='home'),
+    #url(r'^$', views.home, name='home'),
 
 ]
