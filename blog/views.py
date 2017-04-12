@@ -49,7 +49,7 @@ def search_result(request):
     query = query.replace(" ", "")
 
 
-    #context = get_object_or_404(query)
+    context = {'query': query}
 
     uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
     client = pymongo.MongoClient(uri)
@@ -61,7 +61,7 @@ def search_result(request):
     #print(b)
     for doc in b:
         context = {doc['store'] , doc['price'], doc['description']}
-    return render(request, 'templates/result.html', context, query)
+    return render(request, 'templates/result.html', context)
     #webpage of detail of your hashtag
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
