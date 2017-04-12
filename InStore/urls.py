@@ -28,7 +28,7 @@ urlpatterns = [
     #url(r'^$', blog_views.home, name='home'),
     url(r'^$', auth_views.login, name='home'),
     url(r'^accounts/profile/',blog_views.home, name = 'home' ),
-    url(r'^account/profile/',blog_views.search_result, name = 'search_result')
+    url(r'^account/profile/?q$',blog_views.search_result, name = 'search_result')
 
 ]
 

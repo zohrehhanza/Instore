@@ -43,7 +43,7 @@ def post_edit(request, pk):
 def home(request):
     return render(request, 'blog/home.html')
 
-def search_result(request):
+def search_result(request,q):
 
     query = request.GET['q']
     query = query.replace(" ", "")
