@@ -48,7 +48,8 @@ def search_result(request):
     query = request.GET['q']
     query = query.replace(" ", "")
 
-    context = {'query': query}
+
+    #context = get_object_or_404(query)
 
     uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
     client = pymongo.MongoClient(uri)

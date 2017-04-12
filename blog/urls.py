@@ -3,8 +3,7 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-     url(r'^$', auth_views.login, name='home'),
-    #     url(r'^$', views.post_list, name='post_list'),
+         #     url(r'^$', views.post_list, name='post_list'),
     #url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
     url(r'^post/new/$', views.post_new, name='post_new'),
