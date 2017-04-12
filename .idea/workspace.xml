@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46c257c7-a213-451f-8d1f-da8067b2d994" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InStore/settings.py" afterPath="$PROJECT_DIR$/InStore/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InStore/urls.py" afterPath="$PROJECT_DIR$/InStore/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/IGA_crawler.py" afterPath="$PROJECT_DIR$/blog/IGA_crawler.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/adonis_crawler.py" afterPath="$PROJECT_DIR$/blog/adonis_crawler.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/facebook.html" afterPath="$PROJECT_DIR$/blog/templates/blog/facebook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/home.html" afterPath="$PROJECT_DIR$/blog/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="$PROJECT_DIR$/blog/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-    </list>
+    <list default="true" id="46c257c7-a213-451f-8d1f-da8067b2d994" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
