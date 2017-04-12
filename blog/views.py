@@ -44,14 +44,15 @@ def home(request):
 
 def search_result(request):
 
+
+    query = request.GET['q']
+    query = query.replace(" ", "")
+
     uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
     client = pymongo.MongoClient(uri)
     db = client.get_default_database()
     products = db['products']
     b = []
-
-    query = request.GET['q']
-    query = query.replace(" ", "")
 
     b = products.find({'$text': {'$search': 'q'}})
     #print(b)
