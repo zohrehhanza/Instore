@@ -17,16 +17,14 @@
 {% block content %}
   <h2>Homepage</h2>
   <p>Hello {{ user.username }}!</p>
-{% endblock %}
 
-    <div>
-
-        <input id= "searchbar" type="text" name="q" placeholder="Search product"/>
-        <button type="submit" value="Search" action = "search_result"/>
-
-    </div>
+<form method="GET" action="" >
+<input id= "searchbar" type="text" name="q" placeholder="Search Hashtags"/>
+<input type="submit" value="Search"/>
+</form>
 
 </body>
 </html>
+{% endblock %}
 
 
