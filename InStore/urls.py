@@ -27,6 +27,6 @@ urlpatterns = [
     #url(r'^logout/$', auth_views.logout, name='logout'),
     #url(r'^$', blog_views.home, name='home'),
    # url(r'^$', auth_views.login, name='home'),
-    url(r'^account/profile/',blog_views.home, name = 'home' ),
+    url(r'^accounts/profile/',blog_views.home, name = 'home' ),
 
 ]

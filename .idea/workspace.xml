@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/InStore/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="422">
-              <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+              <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding>
                 <element signature="e#641#682#0" expanded="true" />
               </folding>
@@ -1093,7 +1093,7 @@
     <entry file="file://$PROJECT_DIR$/InStore/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
-          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
           <folding>
             <element signature="e#641#682#0" expanded="true" />
           </folding>
