@@ -49,7 +49,7 @@ def search_result(request):
 
     context = {'query': query}
 
-    uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+    '''uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
     client = pymongo.MongoClient(uri)
     db = client.get_default_database()
     products = db['products']
@@ -58,7 +58,7 @@ def search_result(request):
     b = products.find({'$text': {'$search': 'q'}})
     #print(b)
     for doc in b:
-        context = {doc['store'] , doc['price'], doc['description']}
+        context = {doc['store'] , doc['price'], doc['description']}'''
     return render(request, 'templates/result.html', context, query)
     #webpage of detail of your hashtag
 #def hashdet(request, hashtag_name):
