@@ -31,7 +31,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '17f4cd2c8e7c18cb58a3c03a638ee3ec'  # App Secret
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost:8000','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost:8000','localhost',u'mysterious-plains-75622.herokuapp.com']
 
 
 # Application definition
