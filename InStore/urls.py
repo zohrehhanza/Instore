@@ -30,5 +30,4 @@ urlpatterns = [
     url(r'^accounts/profile/',blog_views.home, name = 'home' ),
 
 ]
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
+
