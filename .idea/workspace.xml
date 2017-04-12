@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46c257c7-a213-451f-8d1f-da8067b2d994" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/home.html" afterPath="$PROJECT_DIR$/blog/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/registration/login.html" afterPath="$PROJECT_DIR$/blog/templates/registration/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -115,8 +116,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state relative-caret-position="425">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,8 +136,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,7 +163,6 @@
         <option value="$PROJECT_DIR$/blog/templates/base.html" />
         <option value="$PROJECT_DIR$/blog/Geolocation.py" />
         <option value="$PROJECT_DIR$/blog/templates/registration/base_2" />
-        <option value="$PROJECT_DIR$/blog/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/blog/Main_brain.py" />
         <option value="$PROJECT_DIR$/blog/templates/blog/facebook.html" />
         <option value="$PROJECT_DIR$/../farzam/adonis_crawler.py" />
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/blog/urls.py" />
         <option value="$PROJECT_DIR$/InStore/urls.py" />
         <option value="$PROJECT_DIR$/InStore/settings.py" />
+        <option value="$PROJECT_DIR$/blog/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/blog/templates/home.html" />
       </list>
     </option>
@@ -1046,14 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1092,10 +1085,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/blog/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
