@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 #from django.contrib.auth.decorators import login_required
@@ -64,3 +65,5 @@ def search_result(request):
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
    # return render(request, 'main/hashdet.html', {'hash': hash})
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
