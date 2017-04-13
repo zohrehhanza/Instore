@@ -42,10 +42,8 @@ def post_edit(request, pk):
 #@login_required
 def home(request):
 
-    context={
-        'doc_1': doc_1
-    }
-    return render(request, 'blog/home.html',{'context':context})
+
+    return render(request, 'blog/home.html')
 
 def search_result(request):
 
