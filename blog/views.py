@@ -46,14 +46,14 @@ def home(request):
     if request.method == 'GET':  # If the form is submitted
         a = "a"
         search_query = request.GET.get('search_box', None)
-        search_zipcode =request.Get.get('zipcode', None)
+        #search_zipcode =request.Get.get('zipcode', None)
         if search_query:
             uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
             client = pymongo.MongoClient(uri)
             db = client.get_default_database()
             products = db['products']
             b = []
-            User_Lat = geolocation(search_zipcode)
+           # User_Lat = geolocation(search_zipcode)
 
             #a='beef'
             b = products.find({'$text': {'$search': search_query}})
@@ -66,7 +66,7 @@ def home(request):
             context = {
             'doc_1': doc_1,
              'Doc_2':Doc_2,
-             'User_Lat':User_Lat
+             #'User_Lat':User_Lat
              }
 
             return render(request, 'blog/result.html', {'context': context},)
