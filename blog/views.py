@@ -78,8 +78,8 @@ def search_result(request):
             doc_1 = {doc['store']}  # , doc['price'], doc['description']}
 
     context = {
-             'a':a
-            'doc_1': doc_1
+             'a':a,
+            'doc_1': doc_1,
             'search_query':search_query
         }
 
