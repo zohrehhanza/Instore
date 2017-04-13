@@ -54,15 +54,15 @@ def home(request):
     context={
         'doc_1': doc_1
     }
-    return render(request, 'blog/home.html',context)
+    return render(request, 'blog/home.html',{'context':context})
 
 def search_result(request):
 
     query = request.GET.get['q']
     #query = query.replace(" ", "")
-    get_object_or_404(query)
+   # get_object_or_404(query)
 
-    return render(request, 'result.html', {'context':context})
+    return render(request, 'result.html')
     #webpage of detail of your hashtag
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
