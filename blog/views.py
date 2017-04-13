@@ -58,10 +58,10 @@ def home(request):
             for doc in b:
                 doc_1 = {doc['store'] , doc['price'], doc['description']}
                 Doc_2.append(doc_1)
-                Doc_3 = str(Doc_2.append(doc_1))
+                #Doc_3 = str(Doc_2.append(doc_1))
             context = {
             'doc_1': doc_1,
-             'Doc_3':Doc_3,
+             'Doc_2':Doc_2,
              }
 
             return render(request, 'blog/result.html', {'context': context})
