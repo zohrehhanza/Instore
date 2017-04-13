@@ -43,8 +43,8 @@ def post_edit(request, pk):
 def home(request):
     if request.method == 'GET':  # If the form is submitted
         a = "a"
-        query = request.GET.get('search_box', None)
-        if query:
+        search_query = request.GET.get('search_box', None)
+        if search_query:
             uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
             client = pymongo.MongoClient(uri)
             db = client.get_default_database()
@@ -59,7 +59,7 @@ def home(request):
             context = {
             'doc_1': doc_1,
                 'a' : a,
-
+            'search_query':search_query
 
              }
 
