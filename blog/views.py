@@ -62,7 +62,7 @@ def search_result(request):
     for doc in b:
         context = {doc['store'], doc['price'], doc['description']}
 
-    return render(request, 'result.html', {'context':context)
+    return render(request, 'result.html', {'context':context})
     #webpage of detail of your hashtag
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
