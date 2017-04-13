@@ -9,7 +9,7 @@ from django.template.context import RequestContext
 #from django.contrib.auth.decorators import login_required
 from social_django.models import UserSocialAuth
 import pymongo
-#import django.db.models import Q
+
 
 # Create your views here.
 
