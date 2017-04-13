@@ -61,9 +61,9 @@ def home(request):
 
 def search_result(request):
 
-    try:
-        query = request.GET.get['q']
-        #query = id.objects.get('searchbar')
+    if request.method == 'GET':  # If the form is submitted
+        a = "a"
+        search_query = request.GET.get('search_box', None)
 
         uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
         client = pymongo.MongoClient(uri)
@@ -71,17 +71,16 @@ def search_result(request):
         products = db['products']
         b = []
 
-        b = products.find({'$text': {'$search': query}})
+        b = products.find({'$text': {'$search': 'beef'}})
         # print(type(b))
 
         for doc in b:
             doc_1 = {doc['store']}  # , doc['price'], doc['description']}
-    except:
-        query = ''
 
     context = {
+             'a':a
             'doc_1': doc_1
-
+            'search_query':search_query
         }
 
     return render(request, 'templates/result.html', {'context':context})
