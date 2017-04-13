@@ -9,7 +9,7 @@ from django.template.context import RequestContext
 #from django.contrib.auth.decorators import login_required
 from social_django.models import UserSocialAuth
 import pymongo
-import django.db.models import Q
+#import django.db.models import Q
 
 # Create your views here.
 
@@ -71,7 +71,7 @@ def search_result(request):
         products = db['products']
         b = []
 
-        b = products.filter(Q(products.find({'$text': {'$search': query}}))).distinct()
+        b = products.find({'$text': {'$search': query}})
         # print(type(b))
 
         for doc in b:
