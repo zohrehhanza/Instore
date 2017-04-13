@@ -47,11 +47,13 @@ def home(request):
     products = db['products']
     b = []
     a = 'beef'
-    b = products.find({'$text': {'$search': a}})
+    b = db.products.find({'$text': {'$search': a}})
     #print(type(b))
     for doc in b:
         context = {doc['store'], doc['price'], doc['description']}
-    return render(request, 'blog/home.html',b.store)
+
+
+    return render(request, 'blog/home.html',context)
 
 #def search_result(request):
 
