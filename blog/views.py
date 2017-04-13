@@ -49,7 +49,7 @@ def search_result(request):
     #query1 = query.replace(" ", "")
 
 
-    context = {'query': query}
+    context = RequestContext(query)#'{'query': query}
 
     uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
     client = pymongo.MongoClient(uri)
