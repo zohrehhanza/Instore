@@ -1,91 +1,77 @@
-{% load staticfiles %}
 
 
 <html>
 
 
     <head>
-        <title>Login Form</title>
+        <title>In_Store_blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <style>
-form {
-    border: 3px solid #f1f1f1;
+
+    </head>
+    <style>
+        .page-body{
+
+	background-color: #DDDDDD;
+	color: black;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-weight: 300;
+	overflow-x: hidden;
+
+        }
+        .page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
 }
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-body{
-  background-color: lightblue;
-}
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-}
-h1{
-    font-size: 700%;
-    font-style: oblique;
-    font-family: Brush Script Std, Brush Script MT, cursive;
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
 }
 
-button:hover {
-    opacity: 0.8;
+.content {
+    margin-left: 40px;
 }
 
-.cancelbtn {
-    width: auto;
-    text-align: left;
-    padding: 10px 18px;
-    background-color: #f44336;
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
 }
 
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
+.date {
+    color: #828282;
 }
 
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
+.save {
     float: right;
-    padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
+.post-form textarea, .post-form input {
+    width: 100%;
 }
-</style>
 
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+    </style>
     <body>
         <div class="page-header">
-
+        {% if user.is_authenticated %}
         <h1><a href="/">InStore</a></h1>
     </div>
     <div class="content container">
