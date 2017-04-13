@@ -41,8 +41,17 @@ def post_edit(request, pk):
 
 #@login_required
 def home(request):
+    uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+    client = pymongo.MongoClient(uri)
+    db = client.get_default_database()
+    products = db['products']
+    b = []
+    b = products.find({'$text': {'$search': query}})
+    #print(type(b))
+    for doc in b:
+        context = {doc['store'], doc['price'], doc['description']}
 
-    return render(request, 'blog/home.html')
+    return render(request, 'blog/home.html',context)
 
 def search_result(request):
 
