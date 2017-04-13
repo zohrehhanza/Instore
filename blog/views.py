@@ -45,7 +45,7 @@ def home(request):
 
 def search_result(request):
 
-    query = request.GET['q']
+    query = request.GET.get['q']
     #query = query.replace(" ", "")
 
 
