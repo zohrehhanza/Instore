@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='home'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     #url(r'^$', views.home, name='home'),
+    url(r'^accounts/profile/$', views.search_result, name='search_result')
 
 ]
