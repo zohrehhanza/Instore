@@ -9,6 +9,7 @@ from django.template.context import RequestContext
 #from django.contrib.auth.decorators import login_required
 from social_django.models import UserSocialAuth
 import pymongo
+import json
 
 
 # Create your views here.
@@ -56,7 +57,8 @@ def home(request):
             Doc_2 = []
             for doc in b:
                 doc_1 = {doc['store'] , doc['price'], doc['description']}
-                Doc_2.append(doc_1)
+                #Doc_2.append(doc_1)
+                json.loads(Doc_2.append(doc_1))
             context = {
             'doc_1': doc_1,
              'Doc_2':Doc_2,
