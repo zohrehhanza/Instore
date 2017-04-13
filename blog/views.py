@@ -83,7 +83,7 @@ def search_result(request):
             'search_query':search_query
         }
 
-    return render(request, 'templates/result.html', {'context':context})
+    return render(request, 'templates/result.html', context)
 
 
     #webpage of detail of your hashtag
