@@ -14,9 +14,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <body>
+
 {% block content %}
   <h2>Homepage</h2>
   <p>Hello {{ user.username }}!</p>
+{% endblock %}
 
 <form type="get" action="." style="margin: 0">
     <input  id="search_box" type="text" name="search_box"  placeholder="Search..." ></br>
@@ -25,6 +27,6 @@
 
 </body>
 </html>
-{% endblock %}
+
 
 
