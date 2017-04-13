@@ -41,23 +41,33 @@ def post_edit(request, pk):
 
 #@login_required
 def home(request):
-    uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-    client = pymongo.MongoClient(uri)
-    db = client.get_default_database()
-    products = db['products']
-    b = []
-    a='beef'
-    b = products.find({'$text': {'$search': a}})
+    if request.method == 'GET':  # If the form is submitted
+        a = "a"
+        query = request.GET.get('search_box', None)
+        if query:
+            uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+            client = pymongo.MongoClient(uri)
+            db = client.get_default_database()
+            products = db['products']
+            b = []
+            a='beef'
+            b = products.find({'$text': {'$search': a}})
     # print(type(b))
-    for doc in b:
-        doc_1 = {doc['store']}  # , doc['price'], doc['description']}
+            for doc in b:
+                doc_1 = {doc['store']}  # , doc['price'], doc['description']}
 
-    context = {
-            'doc_1': doc_1
+            context = {
+            'doc_1': doc_1,
+                'a' : a,
 
-        }
 
-    return render(request, 'blog/home.html',{'context':context})
+             }
+
+            return render(request, 'blog/home.html', {'context': context})
+
+        else:
+            return render(request, 'blog/home.html')
+
 
 def search_result(request):
 
