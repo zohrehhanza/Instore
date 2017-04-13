@@ -56,8 +56,7 @@ def search_result(request):
     db = client.get_default_database()
     products = db['products']
     b = []
-    a = 'beef'
-    b = products.find({'$text': {'$search': a}})
+    b = products.find({'$text': {'$search': query}})
     #print(type(b))
     for doc in b:
         context = {doc['store'], doc['price'], doc['description']}
