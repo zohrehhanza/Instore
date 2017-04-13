@@ -51,21 +51,24 @@ def search_result(request):
         query = request.GET['q']
     #query = query.replace(" ", "")
    # get_object_or_404(query)
+        if query:
+
+            uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+            client = pymongo.MongoClient(uri)
+            db = client.get_default_database()
+            products = db['products']
+            b = []
+
+            b = products.find({'$text': {'$search': query}})
+        # print(type(b))
+            for doc in b:
+                doc_1 = {doc['store']}  # , doc['price'], doc['description']}
     except:
         query = ''
-        uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-        client = pymongo.MongoClient(uri)
-        db = client.get_default_database()
-        products = db['products']
-        b = []
 
-        b = products.find({'$text': {'$search': query}})
-        # print(type(b))
-        for doc in b:
-            doc_1 = {doc['store']}  # , doc['price'], doc['description']}
     context = {
-            'doc_1': doc_1,
-            'query': query
+            'doc_1': doc_1
+
         }
 
     return render(request, 'result.html', {'context':context})
