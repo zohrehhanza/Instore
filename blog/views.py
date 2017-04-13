@@ -46,11 +46,14 @@ def home(request):
     db = client.get_default_database()
     products = db['products']
     b = []
-    b = products.find({'$text': {'$search': query}})
+    a = 'beef'
+    b = products.find({'$text': {'$search': a}})
     #print(type(b))
     for doc in b:
-        context = {doc['store'], doc['price'], doc['description']}
-
+        doc_1 = {doc['store'], doc['price'], doc['description']}
+    context={
+        'doc_1': doc_1
+    }
     return render(request, 'blog/home.html',context)
 
 def search_result(request):
@@ -58,17 +61,6 @@ def search_result(request):
     query = request.GET.get['q']
     #query = query.replace(" ", "")
     get_object_or_404(query)
-
-    context = {'query': query}
-    uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-    client = pymongo.MongoClient(uri)
-    db = client.get_default_database()
-    products = db['products']
-    b = []
-    b = products.find({'$text': {'$search': query}})
-    #print(type(b))
-    for doc in b:
-        context = {doc['store'], doc['price'], doc['description']}
 
     return render(request, 'result.html', {'context':context})
     #webpage of detail of your hashtag
