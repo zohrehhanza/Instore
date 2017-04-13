@@ -50,17 +50,14 @@ def home(request):
             db = client.get_default_database()
             products = db['products']
             b = []
-            a='beef'
-            b = products.find({'$text': {'$search': a}})
+            #a='beef'
+            b = products.find({'$text': {'$search': search_query}})
     # print(type(b))
             for doc in b:
                 doc_1 = {doc['store'] , doc['price'], doc['description']}
 
             context = {
             'doc_1': doc_1,
-                'a' : a,
-            'search_query':search_query
-
              }
 
             return render(request, 'blog/result.html', {'context': context})
