@@ -59,7 +59,7 @@ def home(request):
 
     return render(request, 'blog/home.html',{'context':context})
 
-def search_result(request):
+def search_result(request,obj):
 
     if request.method == 'GET':  # If the form is submitted
         a = "a"
@@ -78,6 +78,7 @@ def search_result(request):
             doc_1 = {doc['store']}  # , doc['price'], doc['description']}
 
     context = {
+            'obj':obj,
              'a':a,
             'doc_1': doc_1,
             'search_query':search_query
