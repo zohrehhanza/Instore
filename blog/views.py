@@ -63,20 +63,17 @@ def search_result(request):
 
     try:
         query = request.GET['q']
-    #query = query.replace(" ", "")
-   # get_object_or_404(query)
-        if query:
 
-            uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-            client = pymongo.MongoClient(uri)
-            db = client.get_default_database()
-            products = db['products']
-            b = []
+        uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+        client = pymongo.MongoClient(uri)
+        db = client.get_default_database()
+        products = db['products']
+        b = []
 
-            b = products.find({'$text': {'$search': query}})
+        b = products.find({'$text': {'$search': query}})
         # print(type(b))
-            for doc in b:
-                doc_1 = {doc['store']}  # , doc['price'], doc['description']}
+        for doc in b:
+            doc_1 = {doc['store']}  # , doc['price'], doc['description']}
     except:
         query = ''
 
@@ -85,7 +82,7 @@ def search_result(request):
 
         }
 
-    return render(request, 'result.html', {'context':context})
+    return render(request, 'templates/result.html', {'context':context})
 
 
     #webpage of detail of your hashtag
