@@ -41,6 +41,16 @@ def post_edit(request, pk):
 
 #@login_required
 def home(request):
+
+    return render(request, 'blog/home.html')
+
+def search_result(request):
+
+    query = request.GET.get['q']
+    #query = query.replace(" ", "")
+    get_object_or_404(query)
+
+    context = {'query': query}
     uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
     client = pymongo.MongoClient(uri)
     db = client.get_default_database()
@@ -52,19 +62,7 @@ def home(request):
     for doc in b:
         context = {doc['store'], doc['price'], doc['description']}
 
-
-    return render(request, 'blog/home.html', {'b':b})
-
-#def search_result(request):
-
-    #query = request.GET.get['q']
-    #query = query.replace(" ", "")
-
-
-   # context = {'query': query}
-
-
-   # return render(request, 'result.html', context)
+    return render(request, 'result.html', {'context':context)
     #webpage of detail of your hashtag
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
