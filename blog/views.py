@@ -9,7 +9,7 @@ from django.template.context import RequestContext
 #from django.contrib.auth.decorators import login_required
 from social_django.models import UserSocialAuth
 import pymongo
-
+import django.db.models import Q
 
 # Create your views here.
 
@@ -62,16 +62,18 @@ def home(request):
 def search_result(request):
 
     try:
-        query = request.GET['q']
-        query = id.objects.get('searchbar')
+        query = request.GET.get['q']
+        #query = id.objects.get('searchbar')
+
         uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
         client = pymongo.MongoClient(uri)
         db = client.get_default_database()
         products = db['products']
         b = []
 
-        b = products.find({'$text': {'$search': query}})
+        b = products.filter(Q(products.find({'$text': {'$search': query}}))).distinct()
         # print(type(b))
+
         for doc in b:
             doc_1 = {doc['store']}  # , doc['price'], doc['description']}
     except:

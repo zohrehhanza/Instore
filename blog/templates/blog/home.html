@@ -21,7 +21,7 @@
 
 <form method="GET" action="search_result" >
 
-<input id= "searchbar" type="text" name="q" placeholder="Search products"/>
+<input id= "searchbar" type="text" name="q" placeholder="Search products" value = {{ request.GET.get}}"/>
 <input type="submit" value="Search"/>
 </form>
 
