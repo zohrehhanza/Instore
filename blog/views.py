@@ -48,10 +48,10 @@ def home(request):
     b = []
     a = 'beef'
     b = products.find({'$text': {'$search': a}})
-    print(type(b))
+    #print(type(b))
     for doc in b:
         context = {doc['store'], doc['price'], doc['description']}
-    return render(request, 'blog/home.html', )
+    return render(request, 'blog/home.html',{b:'b'} )
 
 #def search_result(request):
 
