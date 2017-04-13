@@ -53,7 +53,7 @@ def home(request):
         context = {doc['store'], doc['price'], doc['description']}
 
 
-    return render(request, 'blog/home.html',{context:'context'})
+    return render(request, 'blog/home.html',(context:'context'))
 
 #def search_result(request):
 
