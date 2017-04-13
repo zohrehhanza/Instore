@@ -51,7 +51,7 @@ def home(request):
     #print(type(b))
     for doc in b:
         context = {doc['store'], doc['price'], doc['description']}
-    return render(request, 'blog/home.html',{'b':b})
+    return render(request, 'blog/home.html',b.store)
 
 #def search_result(request):
 
