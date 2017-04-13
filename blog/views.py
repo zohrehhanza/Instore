@@ -57,7 +57,7 @@ def home(request):
             Doc_2 = []
             for doc in b:
                 doc_1 = {doc['store'] , doc['price'], doc['description']}
-                #Doc_2.append(doc_1)
+                Doc_2.append(doc_1)
                 Doc_3 = str(Doc_2.append(doc_1))
             context = {
             'doc_1': doc_1,
