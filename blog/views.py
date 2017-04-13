@@ -63,7 +63,7 @@ def home(request):
 
              }
 
-            return render(request, 'blog/home.html', {'context': context})
+            return render(request, 'blog/result.html', {'context': context})
 
         else:
             return render(request, 'blog/home.html')
