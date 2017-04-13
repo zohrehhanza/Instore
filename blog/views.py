@@ -63,7 +63,7 @@ def search_result(request):
 
     try:
         query = request.GET['q']
-
+        query = id.objects.get('searchbar')
         uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
         client = pymongo.MongoClient(uri)
         db = client.get_default_database()
