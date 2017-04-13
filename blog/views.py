@@ -41,16 +41,7 @@ def post_edit(request, pk):
 
 #@login_required
 def home(request):
-    uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-    client = pymongo.MongoClient(uri)
-    db = client.get_default_database()
-    products = db['products']
-    b = []
-    a = 'beef'
-    b = products.find({'$text': {'$search': a}})
-    #print(type(b))
-    for doc in b:
-        doc_1 = {doc['store']}#, doc['price'], doc['description']}
+
     context={
         'doc_1': doc_1
     }
@@ -58,11 +49,30 @@ def home(request):
 
 def search_result(request):
 
-    query = request.GET.get['q']
+    try:
+        query = request.GET['q']
     #query = query.replace(" ", "")
    # get_object_or_404(query)
+    except:
+        query = ''
+        uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+        client = pymongo.MongoClient(uri)
+        db = client.get_default_database()
+        products = db['products']
+        b = []
+        a = 'beef'
+        b = products.find({'$text': {'$search': a}})
+        # print(type(b))
+        for doc in b:
+            doc_1 = {doc['store']}  # , doc['price'], doc['description']}
+    context = {
+            'doc_1': doc_1,
+            'query': query
+        }
 
-    return render(request, 'result.html')
+    return render(request, 'result.html', {'context':context})
+
+
     #webpage of detail of your hashtag
 #def hashdet(request, hashtag_name):
   #  hash = get_object_or_404(Hashtag, name = hashtag_name)
