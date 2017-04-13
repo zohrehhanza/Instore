@@ -52,7 +52,7 @@ def home(request):
     for doc in b:
         doc_1 = {doc['store'], doc['price'], doc['description']}
     context={
-        'doc_1': doc_1
+        'doc_1': doc_1.store
     }
     return render(request, 'blog/home.html',{'context':context})
 
