@@ -32,3 +32,4 @@ urlpatterns = [
     #url(r'^accounts/profile', blog_views.home, name='home'),
 
 ]
+
