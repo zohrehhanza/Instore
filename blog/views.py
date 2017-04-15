@@ -64,9 +64,11 @@ def home(request):
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append((doc_1))
+                len_doc2=len(Doc_2)
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
              'Doc_2':Doc_2,
+             'len_doc2':len_doc2,
              #'User_Lat':User_Lat
              }
 
