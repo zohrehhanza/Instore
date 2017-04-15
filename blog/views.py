@@ -70,7 +70,7 @@ def home(request):
              #'User_Lat':User_Lat
              }
 
-            return render(request, 'blog/result.html', {'context': context},)
+            return render(request, 'blog/result.html', context)
 
         else:
             return render(request, 'blog/home.html')
