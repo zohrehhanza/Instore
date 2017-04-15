@@ -12,7 +12,6 @@ import pymongo
 import json
 from blog.Geolocation import geolocation
 
-
 # Create your views here.
 
 def post_list(request):
@@ -61,7 +60,10 @@ def home(request):
             Doc_2 = []
             for doc in b:
                 doc_1 = {doc['store'] , doc['price'], doc['description']}
-                Doc_2.append(doc_1)
+
+                doc_11=json.loads(doc_1)
+
+                Doc_2.append(doc_11)
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
              'Doc_2':Doc_2,
