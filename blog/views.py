@@ -62,7 +62,7 @@ def home(request):
                 doc_st=doc['store']
                 doc_pr=doc['price']
                 doc_des=doc['description']
-                doc_1 = {"store:" ,doc_st ,"price:" ,doc_pr,"description:", doc_des}
+                doc_1 = ["store:" ,doc_st ,"price:" ,doc_pr,"description:", doc_des]
 
                # doc_11=json.loads(doc_1)
 
