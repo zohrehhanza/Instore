@@ -61,9 +61,9 @@ def home(request):
             for doc in b:
                 doc_1 = {doc['store'] , doc['price'], doc['description']}
 
-                doc_11=json.loads(doc_1)
+               # doc_11=json.loads(doc_1)
 
-                Doc_2.append(str(doc_11))
+                Doc_2.append((doc_1))
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
              'Doc_2':Doc_2,
