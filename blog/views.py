@@ -52,16 +52,16 @@ def home(request):
         #if search_query:
          #   uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
           #  client = pymongo.MongoClient(uri)
-           # db = client.get_default_database()
-            #products = db['products']
+        db = client.get_default_database()
+        #products = db['products']
 
             #b = []
-            User_Lat = geolocation(search_zipcode)
+        #User_Lat = geolocation(search_zipcode)
 
             #a='beef'
-            b = products.find({'$text': {'$search': search_query}})
+         #   b = products.find({'$text': {'$search': search_query}})
     # print(type(b))
-            Doc_2 = []
+            #Doc_2 = []
            # for doc in b:
 
           #      doc_st=doc['store']
@@ -75,8 +75,8 @@ def home(request):
           #  len_doc2=len(Doc_2)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
-            context = {
-               'search_zipcode':search_zipcode,
+        context = {
+               'search_zipcode':search_zipcode
              #  'User_Lat':User_Lat,
              #  'doc_st':doc_st,
             #   'Doc_2': Doc_2,
@@ -84,10 +84,10 @@ def home(request):
              #'User_Lat':User_Lat
              }
 
-            return render(request, 'blog/result.html', context)
+        return render(request, 'blog/result.html', context)
 
-        else:
-            return render(request, 'blog/home.html')
+    else:
+        return render(request, 'blog/home.html')
 
 
 def search_result(request):
