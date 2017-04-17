@@ -74,9 +74,11 @@ def home(request):
 
                 Doc_2.append(doc_1)
             len_doc2=len(Doc_2)
+            Dis_2_store=Distance(search_zipcode,good_loc)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+                'Dist_2_store':Dis_2_store,
                 'good_loc_lat':good_loc[0],
                 'good_loc_lng': good_loc[1],
                'search_zipcode':search_zipcode,
