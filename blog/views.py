@@ -69,16 +69,17 @@ def home(request):
                 doc_pr=doc['price']
                 doc_des=doc['description']
                 doc_1 = [doc['store'], doc['price'], doc['description']]
-                good_loc=doc['location']
+
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
+            good_loc = doc['location']
             len_doc2=len(Doc_2)
-            Dis_2_store=Distance(search_zipcode,good_loc)
+            Dis_2_store=Distance(User_Lat,good_loc)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
-                'Dist_2_store':Dis_2_store,
+                'Dis_2_store':Dis_2_store,
                 'good_loc_lat':good_loc[0],
                 'good_loc_lng': good_loc[1],
                'search_zipcode':search_zipcode,
