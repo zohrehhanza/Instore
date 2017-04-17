@@ -49,13 +49,13 @@ def home(request):
         a = "a"
         #search_query = request.GET.get('search_box', None)
         search_zipcode =request.GET.get('zipcode', None)
-        if search_query:
-            uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-            client = pymongo.MongoClient(uri)
-            db = client.get_default_database()
-            products = db['products']
+        #if search_query:
+         #   uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+          #  client = pymongo.MongoClient(uri)
+           # db = client.get_default_database()
+            #products = db['products']
 
-            b = []
+            #b = []
             User_Lat = geolocation(search_zipcode)
 
             #a='beef'
