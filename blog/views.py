@@ -63,6 +63,9 @@ def home(request):
             b = products1.find({'$text': {'$search': search_query}})
     # print(type(b))
             Doc_2 = []
+            Doc_2_tore=[]
+            Doc_2_price=[]
+            Doc_2_description=[]
             for doc in b:
 
                 doc_st=doc['store']
@@ -73,6 +76,9 @@ def home(request):
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
+                Doc_2_store.append(doc_st)
+                Doc_2_price.append(doc_pr)
+                Doc_2_description.append(doc_des)
             #for item in Doc_2:
 
             good_loc = doc['location']
@@ -90,6 +96,9 @@ def home(request):
                 ''
                'Doc_2': Doc_2,
                'len_doc2':len_doc2,
+                'Doc_2_store':Doc_2_store,
+                'Doc_2_price':Doc_2_price,
+                'Doc_2_description':Doc_2_description,
              #'User_Lat':User_Lat
              }
 
