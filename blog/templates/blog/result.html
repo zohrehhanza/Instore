@@ -8,12 +8,13 @@
     {{ good_loc_lng }}
 <h4>{{ len_doc2 }} case have been found!</h4>
     <br>{{ User_Lat }}</br>
-    {% for item in Doc_2_store %}
-    {{ item }} </br>
+    <div>{% for item in Doc_2_store %}
+        <p>store: {{ item }} </p></br>
         {% for j in Doc_2_description%}
-                {{ j }}</br>
+            <p> Description:{{ j }}</p></br>
         {% endfor %}
     {% endfor %}
+    </div>
 
 
 
