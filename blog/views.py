@@ -100,10 +100,10 @@ def search_result(request):
         uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
         client = pymongo.MongoClient(uri)
         db = client.get_default_database()
-        products = db['products']
+        products1 = db['products1']
         b = []
 
-        b = products.find({'$text': {'$search': 'beef'}})
+        b = products1.find({'$text': {'$search': 'beef'}})
         # print(type(b))
 
         for doc in b:
