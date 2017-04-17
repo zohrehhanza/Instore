@@ -52,7 +52,7 @@ def home(request):
         #if search_query:
          #   uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
           #  client = pymongo.MongoClient(uri)
-        db = client.get_default_database()
+       # db = client.get_default_database()
         #products = db['products']
 
             #b = []
