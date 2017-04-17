@@ -4,9 +4,9 @@
 <div>
 {{ doc_st }}
 <h4>{{ len_doc2 }} case have been found!</h4>
-    <% for i in doc_2 %>
+    {% for i in doc_2 %}
       <td><%=i%> </td> <td><%=doc_2[i]%></td>
-    <% end %>
+    {% endfor %}
 
 </div>
 
