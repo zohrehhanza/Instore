@@ -63,7 +63,7 @@ def home(request):
             b = products1.find({'$text': {'$search': search_query}})
     # print(type(b))
             Doc_2 = []
-            Doc_2_tore=[]
+            Doc_2_store=[]
             Doc_2_price=[]
             Doc_2_description=[]
             for doc in b:
