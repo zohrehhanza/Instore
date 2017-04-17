@@ -11,6 +11,7 @@ from social_django.models import UserSocialAuth
 import pymongo
 import json
 from blog.Geolocation import geolocation
+from PythonInsideHTML import PIH
 
 # Create your views here.
 
