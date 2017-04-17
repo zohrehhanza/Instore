@@ -53,13 +53,14 @@ def home(request):
             uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
             client = pymongo.MongoClient(uri)
             db = client.get_default_database()
-            products = db['products']
+            products1 = db['products1']
 
             b = []
             User_Lat = geolocation(search_zipcode)
 
+
             #a='beef'
-            b = products.find({'$text': {'$search': search_query}})
+            b = products1.find({'$text': {'$search': search_query}})
     # print(type(b))
             Doc_2 = []
             for doc in b:
