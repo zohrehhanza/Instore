@@ -73,6 +73,8 @@ def home(request):
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
+            #for item in Doc_2:
+
             good_loc = doc['location']
             len_doc2=len(Doc_2)
             #Dis_2_store=Distance(User_Lat,good_loc)
@@ -85,6 +87,7 @@ def home(request):
                'search_zipcode':search_zipcode,
                'User_Lat':User_Lat,
                'doc_st':doc_st,
+                ''
                'Doc_2': Doc_2,
                'len_doc2':len_doc2,
              #'User_Lat':User_Lat
