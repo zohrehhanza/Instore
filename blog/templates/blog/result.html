@@ -10,12 +10,12 @@
     <br>{{ User_Lat }}</br>
     {% for item in Doc_2_store %}
     {{ item }} </br>
-        {% for i in Doc_2_price %}
+    {% endfor %}
+    {% for i in Doc_2_price %}
             {{ i }}</br>
-            {% for j in Doc_2_description%}
+    {% endfor %}
+    {% for j in Doc_2_description%}
                 {{ j }}</br>
-            {% endfor %}
-        {% endfor %}
     {% endfor %}
 
 
