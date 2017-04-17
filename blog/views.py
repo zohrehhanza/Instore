@@ -71,6 +71,7 @@ def home(request):
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+               'doc_st':doc_st,
                'Doc_2': Doc_2,
                'len_doc2':len_doc2,
              #'User_Lat':User_Lat
