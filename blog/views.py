@@ -56,7 +56,7 @@ def home(request):
             products = db['products']
 
             b = []
-            User_Lat = geolocation(str(search_zipcode))
+            User_Lat = geolocation(search_zipcode)
 
             #a='beef'
             b = products.find({'$text': {'$search': search_query}})
@@ -76,6 +76,7 @@ def home(request):
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+                'search_zipcode':search_zipcode,
                'User_Lat':User_Lat,
                'doc_st':doc_st,
                'Doc_2': Doc_2,
