@@ -69,7 +69,7 @@ def home(request):
                 doc_pr=doc['price']
                 doc_des=doc['description']
                 doc_1 = [doc['store'], doc['price'], doc['description']]
-
+                good_loc=doc['location']
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
@@ -77,6 +77,8 @@ def home(request):
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+                'good_loc_lat':good_loc[0],
+                'good_loc_lng': good_loc[1],
                'search_zipcode':search_zipcode,
                'User_Lat':User_Lat,
                'doc_st':doc_st,
