@@ -11,7 +11,9 @@ from social_django.models import UserSocialAuth
 import pymongo
 import json
 from blog.Geolocation import geolocation
+from blog.Geolocation import Distance
 from PythonInsideHTML import PIH
+
 
 # Create your views here.
 
@@ -46,20 +48,22 @@ def home(request):
     if request.method == 'GET':  # If the form is submitted
         a = "a"
         search_query = request.GET.get('search_box', None)
-        #search_zipcode =request.Get.get('zipcode', None)
+        search_zipcode =request.GET.get('zipcode', None)
         if search_query:
             uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
             client = pymongo.MongoClient(uri)
             db = client.get_default_database()
             products = db['products']
+
             b = []
-            #User_Lat = geolocation(search_zipcode)
+            User_Lat = str(geolocation(search_zipcode))
 
             #a='beef'
             b = products.find({'$text': {'$search': search_query}})
     # print(type(b))
             Doc_2 = []
             for doc in b:
+
                 doc_st=doc['store']
                 doc_pr=doc['price']
                 doc_des=doc['description']
@@ -72,6 +76,7 @@ def home(request):
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+               'User_Lat':User_Lat,
                'doc_st':doc_st,
                'Doc_2': Doc_2,
                'len_doc2':len_doc2,
