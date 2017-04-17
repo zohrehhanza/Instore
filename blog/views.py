@@ -62,7 +62,7 @@ def home(request):
                 doc_st=doc['store']
                 doc_pr=doc['price']
                 doc_des=doc['description']
-                doc_1 = {doc['store'], doc['price'], doc['description']}
+                doc_1 = [doc['store'], doc['price'], doc['description']]
 
                # doc_11=json.loads(doc_1)
 
@@ -71,12 +71,12 @@ def home(request):
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
-                'Doc_2': Doc_2,
+               'Doc_2': Doc_2,
                'len_doc2':len_doc2,
              #'User_Lat':User_Lat
              }
 
-            return render(request, 'blog/result.html', {'context': context})
+            return render(request, 'blog/result.html', context)
 
         else:
             return render(request, 'blog/home.html')
