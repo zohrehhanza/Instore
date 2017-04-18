@@ -13,10 +13,11 @@ def geolocation(zipcode):
 
 def Distance(Client_loc,Product_loc):
     g = geocoders.GoogleV3(api_key='AIzaSyB7WTLJn0xu0C1Mkc118yUTehbB8jViv0Y')
-    Radius = vincenty(Client_loc,Product_log)
+    Radius = vincenty(Client_loc,Product_loc).meters
     geolocator = Nominatim()
-    postalcode = geolocator.reverse(Product_loc)
-    return(Radius,postalcode)
+   # postalcode = geolocator.reverse(Product_loc)
+    return(Radius)
+
  #   print(location.latitude,location.longitude)
 #print(location.raw)
 #print(location.address)

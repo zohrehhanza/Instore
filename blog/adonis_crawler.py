@@ -16,6 +16,7 @@ client = pymongo.MongoClient(uri)
 db = client.get_default_database()
 products = db['products']
 store_n = 'Adonis'
+store_loc = ['H7T 1R3','H4R OC9','H3H 1M9','H3C 2G6']
 # example option: add 'incognito' command line arg to options
 option = webdriver.ChromeOptions()
 option.add_argument("--incognito")
@@ -39,11 +40,11 @@ for i in range(8):
     containers = page_soup.findAll("div", {"class": "ribbon"})
     titles = page_soup.findAll("h2")
 
-    jj = 0
     for i in range(len(containers)):  # t in titles:
+        for j3 in store_loc:
         # list_products.append("store: Adonis"+",price:"+containers[i].text.strip()+',discription:'+titles[i].text.strip()+'+')
-        products.insert({"store": store_n, "price": containers[i].text.strip(), 'description': titles[i].text.strip()})
-        jj = jj + 1
+              products.insert({"store": store_n, "price": containers[i].text.strip(), 'description': titles[i].text.strip(),'location': j3})
+              #jj = jj + 1
 date = page_soup.find("h1")
 # print(date.text.strip())
 # print(list_products)

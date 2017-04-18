@@ -95,10 +95,11 @@ def home(request):
 
             len_doc2=len(Doc_2)
 
-            #Dis_2_store=Distance(User_Lat,good_ltlng)
+            Dis_2_store=Distance(User_Lat,good_ltlng)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+                'Dis_2_store':Dis_2_store,
                 'doc_pr':doc['price'],
                 'good_ltlng':good_ltlng,
                 'good_loc_lng': good_loc[1],
@@ -131,31 +132,7 @@ def home(request):
             return render(request, 'blog/home.html')
 
 
-def search_result(request):
 
-    if request.method == 'GET':  # If the form is submitted
-        a = "a"
-        search_query = request.GET.get('search_box', None)
-
-        uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
-        client = pymongo.MongoClient(uri)
-        db = client.get_default_database()
-        products = db['products']
-        b = []
-
-        b = products.find({'$text': {'$search': 'beef'}})
-        # print(type(b))
-
-        for doc in b:
-            doc_1 = {doc['store']}  # , doc['price'], doc['description']}
-
-    context = {
-            'a':a,
-            'doc_1': doc_1,
-            'search_query':search_query
-        }
-
-    return render(request, 'blog/result.html', context)
 
 
     #webpage of detail of your hashtag
