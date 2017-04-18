@@ -1,27 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<h4>{{ len_doc2 }} case have been found!</h4>
 
     {{ search_zipcode }}
     {% for item in Doc_2%}
         <p>  Item:{{item}}</p>
     {% endfor %}
 
-
-<h4>{{ len_doc2 }} case have been found!</h4>
-    <br>{{ User_Lat }}</br>
-    <div>{% for item in Doc_2_store %}
-        <p>store: {{ item }} </p></br>
-        {% for j in zip_cont %}
-            <p> Description:{{j}}</p></br>
-        {% endfor %}
-    {% endfor %}
-    </div>
-
-
-
-
-
 {% endblock %}
-{
