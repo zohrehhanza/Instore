@@ -4,7 +4,11 @@
 <br>
     <h3>{{ Dis_2_store }} meters</h3>
     {{ search_zipcode }}
-    {{ Doc_2 }}
+    {% for item in Doc_2%}
+        <p> Item:{{item}}</p></br>
+    {% endfor %}
+
+
 <h4>{{ len_doc2 }} case have been found!</h4>
     <br>{{ User_Lat }}</br>
     <div>{% for item in Doc_2_store %}
