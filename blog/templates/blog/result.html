@@ -8,9 +8,9 @@
 <h4>{{ len_doc2 }} case have been found!</h4>
     <br>{{ User_Lat }}</br>
     <div>{% for item in Doc_2_store %}
-        <p>store: {{ item }} </p></br>
+        <div><p>store: {{ item }} </p></br>
         {% for j in Doc_2_description%}
-            <p> Description:{{ j }}</p></br>
+            <p> Description:{{ j }}</p></div>
         {% endfor %}
     {% endfor %}
     </div>
