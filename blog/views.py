@@ -78,8 +78,10 @@ def home(request):
                 doc_st=doc['store']
                 doc_pr=doc['price']
                 doc_des=doc['description']
-                doc_1 = [doc['store'], doc['price'], doc['description']]
-
+                good_loc = doc['location']
+                good_ltlng = geolocation(good_loc)
+                Dis_2_store = Distance(User_Lat, good_ltlng)
+                doc_1 = [doc['store'], doc['price'], doc['description'],Dis_2_store]
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
@@ -87,15 +89,14 @@ def home(request):
                 Doc_2_price.append(doc_pr)
                 Doc_2_description.append(doc_des)
 
-                good_loc = doc['location']
-                good_ltlng = geolocation(good_loc)
+
             #for item in Doc_2:
 
 
 
             len_doc2=len(Doc_2)
 
-            Dis_2_store=Distance(User_Lat,good_ltlng)
+           # Dis_2_store=Distance(User_Lat,good_ltlng)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
