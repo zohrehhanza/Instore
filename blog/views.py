@@ -87,7 +87,7 @@ def home(request):
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
-                'doc_pr':doc_pr,
+                'doc_pr':doc['price'],
                 'good_loc_lat':good_loc[0],
                 'good_loc_lng': good_loc[1],
                'search_zipcode':search_zipcode,
