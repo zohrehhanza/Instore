@@ -79,13 +79,16 @@ def home(request):
                 Doc_2_store.append(doc_st)
                 Doc_2_price.append(doc_pr)
                 Doc_2_description.append(doc_des)
+
+                good_loc = doc['location']
+                good_ltlng = geolocation(good_loc)
             #for item in Doc_2:
 
-            good_loc = doc['location']
-            good_ltlng =geolocation(good_loc)
+
+
             len_doc2=len(Doc_2)
 
-            #Dis_2_store=Distance(User_Lat,good_ltlng)
+            Dis_2_store=Distance(User_Lat,good_ltlng)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
