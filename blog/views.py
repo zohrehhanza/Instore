@@ -97,9 +97,10 @@ def home(request):
             len_doc2=len(Doc_2)
 
            # Dis_2_store=Distance(User_Lat,good_ltlng)
-
+            sorted_Doc_2= Doc_2.sort(key=lambda x: x[3])
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
+                'sorted_Doc_2':sorted_Doc_2,
                 'Dis_2_store':Dis_2_store,
                 'doc_pr':doc['price'],
                 'good_ltlng':good_ltlng,
