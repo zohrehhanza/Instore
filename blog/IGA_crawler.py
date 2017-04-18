@@ -15,6 +15,7 @@ client = pymongo.MongoClient(uri)
 db = client.get_default_database()
 products = db['products']
 store_n='IGA'
+store_loc=['H3Z 1X5','H4C 1R1','H3K 1P2','H5B 1B5','H2L 2E4']
 
 # example option: add 'incognito' command line arg to options
 option = webdriver.ChromeOptions()
@@ -24,14 +25,14 @@ option.add_argument("--incognito")
 browser = webdriver.Chrome(executable_path='C:\\Program Files (x86)\\selenium\\chromedriver.exe', chrome_options=option)
 
 # go to website of interest
-#browser.get("https://www.iga.net/en/online_grocery/browse/in-flyer")
-browser.get("https://www.iga.net/en/online_grocery/browse/in-flyer?page=27&pageSize=60")
+browser.get("https://www.iga.net/en/online_grocery/browse/in-flyer")
+#browser.get("https://www.iga.net/en/online_grocery/browse/in-flyer?page=27&pageSize=60")
 
 #print('finish')
 ii=0
 Prices = []
 Description=[]
-for i in range(15):
+for i in range(30):
     my_url = browser.current_url
     uClient = uReq(my_url)
     page_html = uClient.read()
@@ -43,9 +44,9 @@ for i in range(15):
     for j in range(len(containers)):  # t in titles:
     #Description.append(' '.join(containers[i].text.replace('\r\n', '').replace('\n', '').split()))
     #Prices.append(price[i].text.strip())
-
-         products.insert({"store" : store_n,  "price" : price[j].text.strip() , 'description' : (' '.join(containers[j].text.replace('\r\n', '').replace('\n', '').split()))})
-         ii=ii+1
+        for j3 in store_loc:
+             products.insert({"store" : store_n,  "price" : price[j].text.strip() , 'description' : (' '.join(containers[j].text.replace('\r\n', '').replace('\n', '').split())), 'location': j3})
+             ii=ii+1
     clicked_page = browser.find_element_by_class_name("icon--arrow-skinny-right").click()
 #db.products.createIndex({"store": "text", "description": "text"})
 #print(j)
