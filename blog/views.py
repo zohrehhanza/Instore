@@ -84,7 +84,7 @@ def home(request):
             good_loc = doc['location']
             good_ltlng =geolocation(good_loc)
             len_doc2=len(Doc_2)
-            #Dis_2_store=Distance(User_Lat,good_loc)
+            #Dis_2_store=Distance(User_Lat,good_ltlng)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
