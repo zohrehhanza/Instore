@@ -49,6 +49,13 @@ def home(request):
         a = "a"
         search_query = request.GET.get('search_box', None)
         search_zipcode =request.GET.get('zipcode', None)
+
+
+
+        search_zipcode = request.GET.get('retail_store', None)
+        search_zipcode = request.GET.get('retail_description', None)
+        search_zipcode = request.GET.get('retail_price', None)
+        search_zipcode = request.GET.get('zipcode_retail', None)
         if search_query:
             uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
             client = pymongo.MongoClient(uri)
@@ -88,7 +95,7 @@ def home(request):
 
             len_doc2=len(Doc_2)
 
-            Dis_2_store=Distance(User_Lat,good_ltlng)
+            #Dis_2_store=Distance(User_Lat,good_ltlng)
 
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
