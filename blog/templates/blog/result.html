@@ -9,9 +9,8 @@
     <br>{{ User_Lat }}</br>
     <div>{% for item in Doc_2_store %}
         <p>store: {{ item }} </p></br>
-        {% for i in range((len(Doc_2))%}
-            <p> Description:{{ Doc_2_description[i]}}</p></br>
-            <p>Price: {{Doc_2_price[i]}}</p></br>
+        {% for j in zip_cont %}
+            <p> Description:{{j}}</p></br>
         {% endfor %}
     {% endfor %}
     </div>
