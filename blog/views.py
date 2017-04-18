@@ -95,7 +95,7 @@ def home(request):
                'User_Lat':User_Lat,
                'doc_st':doc_st,
                 'Doc_2': Doc_2,
-                'zip_cont':zip[Doc_2_description,Doc_2_price],
+                'zip_cont':[Doc_2_description,Doc_2_price],
                'len_doc2':len_doc2,
                 'Doc_2_store':Doc_2_store,
                 'Doc_2_price':Doc_2_price,
