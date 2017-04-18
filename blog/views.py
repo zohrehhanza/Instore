@@ -52,10 +52,10 @@ def home(request):
 
 
 
-        search_zipcode = request.GET.get('retail_store', None)
-        search_zipcode = request.GET.get('retail_description', None)
-        search_zipcode = request.GET.get('retail_price', None)
-        search_zipcode = request.GET.get('zipcode_retail', None)
+        retail_store = request.GET.get('retail_store', None)
+        retail_description = request.GET.get('retail_description', None)
+        retail_price = request.GET.get('retail_price', None)
+        retail_zipcode = request.GET.get('zipcode_retail', None)
         if search_query:
             uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
             client = pymongo.MongoClient(uri)
@@ -115,7 +115,18 @@ def home(request):
              }
 
             return render(request, 'blog/result.html', context)
+        elif  retail_store:
 
+            uri = 'mongodb://instore2:123abc@ds159050.mlab.com:59050/in-store'
+            client = pymongo.MongoClient(uri)
+            db = client.get_default_database()
+            products = db['products']
+
+            b = []
+
+            # a='beef'
+            b = products.insert({"store" : retail_store,  "price" : retail_price , 'description' : retail_description, 'location': retail_zipcode})
+            return render(request,'blog/retail_info.html')
         else:
             return render(request, 'blog/home.html')
 
