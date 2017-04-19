@@ -18,15 +18,15 @@
 {% block content %}
   <h2>Homepage</h2>
   <p>Hello {{ user.username }}!</p>
-<div class="row">
 
-<div class="col-sm-6"><form type="get" action="." style="margin: 0">
+
+    <form type="get" action="." style="margin: 0">
     <input  id="search_box" type="text" name="search_box"  placeholder="Search..." ></br>
     <input id="zipcode"  type ="text"  name="zipcode" placeholder="enter postal code"/></br>
     <button id="search_submit" type="submit" >Submit</button>
-</form></div>
-    <p>Enter as a retailers:</p>
-    <div class="col-sm-6">
+</form>
+    <p></p>
+    <p>As a retailer:</p>
 <form type="get" action="." style="...">
 
     <input  id="retail_store" type="text" name="retail_store"  placeholder="Enter name of store " ></br>
@@ -34,8 +34,8 @@
     <input  id="retail_price" type="text" name="retail_price"  placeholder="Enter price " ></br>
     <input id="zipcode_retail"  type ="text"  name="zipcode_retail" placeholder="enter postal code"/></br>
     <button id="retail_submit" style= "background-color:#CB2027;" type="submit" >Register your product</button>
-</form></div>
-</div>
+</form>
+
 {% endblock %}
 </body>
 </html>
