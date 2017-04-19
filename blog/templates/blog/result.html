@@ -6,11 +6,10 @@
     <h5>your current location is :{{ search_zipcode }}</h5>
     <div class="row">
 
-    {% for item in Doc_2%}{% x=item[0]%}
-        <p>{{ x }}</p>
-        {% for i in item %}
+    {% for item in Doc_2%}
+            {% for i in item %}
             <div class="col-sm-4"><p>{{i}}</p>
-            <</div>
+            </div>
             {% endfor %}
     {% endfor %}
 
