@@ -7,7 +7,7 @@
     <div class="row">
 
   {% for item in Doc_2%}
-            {% for i,j,k in map(None, Doc_2_stoore,Dc_2_description) %}
+            {% for i ,j,k in zip(Doc_2_store,Doc_2_description,Doc_2_price) %}
             <div class="col-sm-4"><p>{{i}}</p>
             <p>{{ j }}</p>
             <p>{{ k }}</p>
