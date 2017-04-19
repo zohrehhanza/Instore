@@ -5,7 +5,8 @@
 
     <h5>your current location is :{{ search_zipcode }}</h5>
     {% for item in Doc_2%}
-        <p>Store: {{ item[0]}}</p>
+        {% for i in item %}
+        <p>{{i}}</p>
             {% endfor %}
     {% endfor %}
 
