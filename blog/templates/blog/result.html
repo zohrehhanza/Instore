@@ -4,10 +4,13 @@
 <h4>{{ len_doc2 }} case have been found!</h4>
 
     <h5>your current location is :{{ search_zipcode }}</h5>
+    <div class="row">
+
     {% for item in Doc_2%}
         {% for i in item %}
-        <p>{{i}}</p>
+            <div class="col-sm-4"><p>{{i}}</p></div>
             {% endfor %}
     {% endfor %}
 
+</div>
 {% endblock %}
