@@ -7,8 +7,10 @@
     <div class="row">
 
   {% for item in Doc_2%}
-            {% for i in item %}
+            {% for i,j,k in map(None, Doc_2_stoore,Dc_2_description) %}
             <div class="col-sm-4"><p>{{i}}</p>
+            <p>{{ j }}</p>
+            <p>{{ k }}</p>
             </div>
             {% endfor %}
     {% endfor %}
