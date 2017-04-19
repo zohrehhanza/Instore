@@ -76,7 +76,7 @@ def home(request):
             for doc in b:
 
                 doc_st= doc['store']
-                doc_st1=["store: "+str(doc_st)]
+                doc_st1="store: "+str(doc_st)
                 doc_pr= doc['price']
                 doc_des=  doc['description']
                 good_loc = doc['location']
