@@ -100,6 +100,7 @@ def home(request):
 
 
             len_doc2=len(Doc_2)
+            Doc_2=Doc_2.sort(key=lambda x: x[3])
 
             Dis_2_store=Distance(User_Lat,good_ltlng)
             sorted_Doc_2= Doc_2.sort()
