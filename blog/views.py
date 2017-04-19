@@ -85,7 +85,7 @@ def home(request):
                 good_loc1="Location: "+str(good_loc)
                 good_ltlng = geolocation(good_loc)
                 Dis_2_store = Distance(User_Lat, good_ltlng)
-                Dis_2_store1= "Distance(in meters): "+str(Doc_2_store)+" m"
+                Dis_2_store1= "Distance(in meters): "+str(Dis_2_store)+" m"
                 doc_1 = [doc_st1, doc_pr1, doc_des1,Dis_2_store1,good_loc1]
                # doc_11=json.loads(doc_1)
 
