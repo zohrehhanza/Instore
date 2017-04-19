@@ -6,12 +6,14 @@
     <h5>your current location is :{{ search_zipcode }}</h5>
     <div class="row">
 
-
-            {% for i,j  in map(None,Doc_2_price,Doc_2_description) %}
-            <div class="col-sm-4"><p>{{i}}</p><p>{{ j }}</p>
+  {% for item in Doc_2%}
+            {% for i in item %}
+            <div class="col-sm-4"><p>{{i}}</p>
             </div>
             {% endfor %}
-    
+    {% endfor %}
+
+
 
 </div>
 {% endblock %}
