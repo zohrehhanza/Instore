@@ -5,14 +5,14 @@ from geopy.distance import vincenty
 from geopy import geocoders
 
 def geolocation(zipcode):
-    g = geocoders.GoogleV3(api_key='AIzaSyB7WTLJn0xu0C1Mkc118yUTehbB8jViv0Y')
+    g = geocoders.GoogleV3(api_key='AIzaSyDLrzM-md0PS10DEDMxI90YWHTm1V1RetU')
     #inputAddress = 'Concordia SGW campus'
     location= g.geocode(zipcode,timeout=10)
     Lat_Long = (location.latitude, location.longitude)
     return(Lat_Long)
 
 def Distance(Client_loc,Product_loc):
-    g = geocoders.GoogleV3(api_key='AIzaSyChkc2PkplFl9dnPDxypX_Ezk0SlIC6N7c')
+    g = geocoders.GoogleV3(api_key='AIzaSyDLrzM-md0PS10DEDMxI90YWHTm1V1RetU')
     Radius = vincenty(Client_loc,Product_loc).meters
     geolocator = Nominatim()
    # postalcode = geolocator.reverse(Product_loc)
