@@ -76,13 +76,17 @@ def home(request):
             for doc in b:
 
                 doc_st= doc['store']
-                doc_st1="store: "+str(doc_st)
+                doc_st1="Store: "+str(doc_st)
                 doc_pr= doc['price']
+                doc_pr1 = "Price: " + str(doc_pr)
                 doc_des=  doc['description']
+                doc_des1="Description: "+str(doc_des)
                 good_loc = doc['location']
+                good_loc1="Location: "+str(good_loc)
                 good_ltlng = geolocation(good_loc)
                 Dis_2_store = Distance(User_Lat, good_ltlng)
-                doc_1 = [doc_st1, doc['price'], doc['description'],Dis_2_store,good_loc]
+                Dis_2_store1= "Distance(in meters): "+Doc_2_store+" m"
+                doc_1 = [doc_st1, doc_pr1, doc_des1,Dis_2_store1,good_loc1]
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
