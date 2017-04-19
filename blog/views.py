@@ -63,7 +63,7 @@ def home(request):
             products = db['products']
 
             b = []
-            User_Lat = geolocation(search_zipcode)
+          #  User_Lat = geolocation(search_zipcode)
 
 
             #a='beef'
@@ -79,9 +79,9 @@ def home(request):
                 doc_pr= doc['price']
                 doc_des=  doc['description']
                 good_loc = doc['location']
-                good_ltlng = geolocation(good_loc)
-                Dis_2_store = Distance(User_Lat, good_ltlng)
-                doc_1 = [doc['store'], doc['price'], doc['description'],Dis_2_store,good_loc]
+           #     good_ltlng = geolocation(good_loc)
+            #    Dis_2_store = Distance(User_Lat, good_ltlng)
+                doc_1 = [doc['store'], doc['price'], doc['description']]#,Dis_2_store,good_loc]
                # doc_11=json.loads(doc_1)
 
                 Doc_2.append(doc_1)
@@ -97,16 +97,16 @@ def home(request):
             len_doc2=len(Doc_2)
 
            # Dis_2_store=Distance(User_Lat,good_ltlng)
-            sorted_Doc_2= Doc_2.sort()
+            #sorted_Doc_2= Doc_2.sort()
                 #Doc_3 = str(Doc_2.append(doc_1))
             context = {
-                'sorted_Doc_2':sorted_Doc_2,
-                'Dis_2_store':Dis_2_store,
+                #'sorted_Doc_2':sorted_Doc_2,
+                #'Dis_2_store':Dis_2_store,
                 'doc_pr':doc['price'],
-                'good_ltlng':good_ltlng,
-                'good_loc_lng': good_loc[1],
+                #'good_ltlng':good_ltlng,
+                #'good_loc_lng': good_loc[1],
                'search_zipcode':search_zipcode,
-               'User_Lat':User_Lat,
+               #'User_Lat':User_Lat,
                'doc_st':doc_st,
                 'Doc_2': Doc_2,
                 'zip_cont':Doc_2_price,
