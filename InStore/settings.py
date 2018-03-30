@@ -21,8 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#)wg5z4h8@*)tmd=8u@__jc$z%2u!#olu$vpj=bf1w%hmwl=u*'
-SOCIAL_AUTH_GITHUB_KEY = '2f2ea22af6b605852165'
-SOCIAL_AUTH_GITHUB_SECRET = '6e5fc76a9a46d264abe7cadcaffcc28beff46fe2'
+SOCIAL_AUTH_GITHUB_KEY = 'f16136084c098635b7ce'
+SOCIAL_AUTH_GITHUB_SECRET = '38ce61cb8b93d3f727c51eeed0f7e53e603d016d'
 SOCIAL_AUTH_TWITTER_KEY = 'iTk9UDH07xdwOJ5oHuF60LeoT'
 SOCIAL_AUTH_TWITTER_SECRET = 'vFcGZfgEnAqqIhZSxDxEulYKiFAw95XpPWbIxNsMTQP1I04uU2'
 SOCIAL_AUTH_FACEBOOK_KEY = '1811658749087315'  # App ID

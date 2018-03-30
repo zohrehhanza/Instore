@@ -12,7 +12,7 @@ import pymongo
 import json
 from blog.Geolocation import geolocation
 from blog.Geolocation import Distance
-from PythonInsideHTML import PIH
+#from PythonInsideHTML import PIH
 
 
 # Create your views here.
